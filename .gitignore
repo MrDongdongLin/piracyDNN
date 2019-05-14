@@ -1,0 +1,6 @@
+model_var.txt
+loss.txt
+acc.txt
+out/
+mnist/
+checkpoint_dir/
