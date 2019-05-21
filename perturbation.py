@@ -12,7 +12,8 @@ def fixed_pattern(sigma, probability):
     e = np.random.choice([sigma[0], sigma[1], sigma[2]], p=p.ravel())
     pattern.append(e)
   pattern = np.array(pattern)
-  return pattern
+  #print(np.shape(pattern))
+  return pattern.reshape((28,28,1))
   
 def generator(inputs, reuse=False):
   with tf.variable_scope("generator", reuse=reuse) as scope:

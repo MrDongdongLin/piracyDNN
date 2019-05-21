@@ -3,4 +3,8 @@ loss.txt
 acc.txt
 out/
 mnist/
-checkpoint_dir/
+savemodel/
+Untitled.ipynb
+cleverhans-fgsm.ipynb
+surrogate_atm.ipynb
+train_fixed_with_sample.ipynb
