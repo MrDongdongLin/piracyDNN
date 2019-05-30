@@ -27,5 +27,7 @@ def generator(inputs, reuse=False):
     # xl = linear(x, 1, scope='fc')
     xl = inputs + xl
     xp = tf.nn.tanh(xl)
+    x_logits = slim.fully_connected(slim.dropout(x, 0.5), 10, activation_fn=None, scope='fc2')
+    x_logits = tf.nn.softmax(x_logits, name="softmax")
     # xl = tf.reshape(xl,[-1,28,28,1])
-    return xl, xp
+    return x_logits, xp
